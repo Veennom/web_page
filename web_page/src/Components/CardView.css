@@ -1,0 +1,37 @@
+.card {
+  max-width: 1020px;
+  height: 400px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #1e212c;
+  color: white;
+  text-align: -webkit-center;
+}
+
+.main {
+  padding-top: 20px;
+  text-align-last: start;
+  margin-left: 25px;
+}
+.title {
+  font-weight: 600;
+  font-size: 20px;
+}
+.description {
+  color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
