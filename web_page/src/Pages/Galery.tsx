@@ -1,5 +1,10 @@
 import React from "react";
+import { GaleryCardView } from "../Components/GaleryCardView";
 
 export const Galery = () => {
-  return <div>Galery</div>;
+  return (
+    <div>
+      <GaleryCardView />
+    </div>
+  );
 };
