@@ -1,5 +1,5 @@
 .card {
-  max-width: 1020px;
+  /* max-width: 1020px; */
   height: 400px;
   margin-bottom: 16px;
   box-sizing: border-box;
@@ -9,7 +9,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #1e212c;
   color: white;
-  text-align: -webkit-center;
 }
 
 .main {
