@@ -19,6 +19,10 @@
 .title {
   font-weight: 600;
   font-size: 20px;
+  cursor: pointer;
+}
+.title:hover {
+  color: #ffa467;
 }
 .description {
   color: rgba(255, 255, 255, 0.7);

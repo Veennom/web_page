@@ -13,20 +13,18 @@
 }
 .showAllSecond {
   padding-top: 50px;
-  justify-content: space-evenly !important;
+  /* place-content: space-evenly; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   background-color: #1e212c;
   max-width: 1020px;
-  /* flex-wrap: wrap;
-  justify-content: center;
-  background-color: #1e212c;
-  color: white;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  justify-content: space-around;  */
 }
 .image {
-  padding-bottom: 20px;
+  padding: 20px;
+}
+.filterCar {
+  padding: 5px;
+}
+.showAll {
+  padding: 5px;
 }

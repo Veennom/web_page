@@ -8,7 +8,7 @@ interface Car {
 }
 
 export const GaleryCardView = () => {
-  const [cars] = useState<Car[]>([
+  const cars = [
     {
       id: 1,
       name: "Audi",
@@ -128,16 +128,18 @@ export const GaleryCardView = () => {
       image:
         "https://rapidapi.com/blog/wp-content/uploads/2021/01/car-apis-300x200.jpg",
     },
-  ]);
+  ];
+  const header = [
+    "Lamborghini",
+    "Audi",
+    "Mercedes",
+    "Rangerover",
+    "Beantly",
+    "Bmw",
+  ];
+  console.log("header", header);
+  const [selectedName, setSelectedName] = useState<string>("");
 
-  const [selectedName, setSelectedName] = useState<string | null>(null);
-
-  const handleNameClick = (name: string) => {
-    setSelectedName(selectedName === name ? null : name);
-  };
-  const handleShowAllClick = () => {
-    setSelectedName(null);
-  };
   const filteredCars = selectedName
     ? cars.filter((car) => car.name === selectedName)
     : cars;
@@ -145,28 +147,28 @@ export const GaleryCardView = () => {
   return (
     <div className="container">
       <div className="showAll">
-        <div onClick={handleShowAllClick}>Show All</div>
-        {Array.from(new Set(cars.map((car) => car.name))).map((name) => (
+        <div className="showAll" onClick={() => setSelectedName("")}>
+          Show All
+        </div>
+
+        {header.map((car) => (
           <div
-            key={name}
-            onClick={() => handleNameClick(name)}
+            className="filterCar"
+            key={car}
+            onClick={() => setSelectedName(car)}
             style={{
-              fontWeight: selectedName === name ? "bold" : "normal",
+              fontWeight: selectedName === car ? "bold" : "normal",
+              textDecoration: selectedName === car ? "underline" : "none",
             }}
           >
-            {name}
+            {car}
           </div>
         ))}
       </div>
       <div className="showAllSecond">
         {filteredCars.map((car) => (
           <div key={car.id}>
-            {/* <p>{car.name}</p> */}
-            <img
-              className="image"
-              src={car.image}
-              // style={{ maxWidth: "100%", maxHeight: "150px" }}
-            />
+            <img className="image" src={car.image} />
           </div>
         ))}
       </div>

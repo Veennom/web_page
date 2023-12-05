@@ -3,7 +3,7 @@ import { GaleryCardView } from "../Components/GaleryCardView";
 
 export const Galery = () => {
   return (
-    <div>
+    <div style={{ marginTop: 5 }}>
       <GaleryCardView />
     </div>
   );
