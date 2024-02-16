@@ -1,13 +1,15 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Home } from "./Pages/Home";
-import { Galery } from "./Pages/Galery";
+import './App.css';
+import { Home } from './Pages/Home';
+import { Galery } from './Pages/Galery';
+import NavBar from './Components/NavBar';
+import { HeroSection } from './Pages/HeroSection';
 
 function App() {
   return (
-    <div className="App">
-      hello
+    <div className='App'>
+      <NavBar />
+      {/* hello */}
+      {/* <HeroSection /> */}
       <Home />
       <Galery />
     </div>

@@ -13,7 +13,7 @@
 }
 .showAllSecond {
   padding-top: 50px;
-  /* place-content: space-evenly; */
+  place-content: space-evenly;
   display: flex;
   flex-wrap: wrap;
   background-color: #1e212c;
